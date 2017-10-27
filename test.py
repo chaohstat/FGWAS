@@ -96,7 +96,7 @@ def run_script(input_dir, output_dir):
     start_1 = time.time()
     # find the optimal bandwidth
     h_opt, hat_mat = bw_opt(coord_data, x_design, y_design)
-    qr_smy_mat, esig_eta, smy_design, resy_design, efit_eta, sm_weight = \
+    qr_smy_mat, esig_eta, smy_design, resy_design, efit_eta = \
         mvcm(coord_data, x_design, y_design, h_opt, hat_mat)
     end_1 = time.time()
     print("Elapsed time in Step 1 is ", end_1 - start_1)

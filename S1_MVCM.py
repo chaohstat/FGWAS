@@ -37,7 +37,7 @@ def mvcm(coord_mat, x_design, y_design, h_opt, hat_mat):
     w = np.zeros((1, d + 1))
     w[0] = 1
     t_mat0 = np.zeros((l, l, d + 1))  # L x L x d + 1 matrix
-    sm_weight = np.zeros((l, l, m))   # L x L x m matrix
+    # sm_weight = np.zeros((l, l, m))   # L x L x m matrix
     t_mat0[:, :, 1] = np.ones((l, l))
 
     for dii in range(d):
@@ -71,6 +71,6 @@ def mvcm(coord_mat, x_design, y_design, h_opt, hat_mat):
     for lii in range(l):
         esig_eta[:, :, lii] = np.dot(np.squeeze(efit_eta[:, lii, :]).T, np.squeeze(efit_eta[:, lii, :]))/n
         qr_smy_mat = qr_smy_mat+np.dot(np.dot(np.squeeze(smy_design[:, lii, :]), inv(esig_eta[:, :, lii])),
-                             np.squeeze(smy_design[:, lii, :]).T)/l
+                                       np.squeeze(smy_design[:, lii, :]).T)/l
 
-    return qr_smy_mat, esig_eta, smy_design, resy_design, efit_eta, sm_weight
+    return qr_smy_mat, esig_eta, smy_design, resy_design, efit_eta
