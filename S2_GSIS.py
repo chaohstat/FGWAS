@@ -18,11 +18,11 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
     """
         Global sure independence screening (GSIS) procedure.
 
-        Args:
+        :param
             snp_mat (matrix): snp data (n*g)
             qr_smy_mat (matrix): common part in global test statistic (n*n)
             hat_mat (matrix): hat matrix (n*n)
-        Outputs:
+        :return
          g_pv_log10 (vector): -log10 p-values of across all SNPs
          g_stat (vector): the global wald test statistics across all SNPs
     """
@@ -34,9 +34,11 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
     zx_mat = np.dot(np.eye(n)-hat_mat, snp_mat).T
     inv_q_zx = np.sum(zx_mat*zx_mat, axis=1)**(-1)
     w, v = eig(qr_smy_mat)
+    w = np.real(w)
     w[w < 0] = 0
     w_diag = np.diag(w**(1/2))
     sq_qr_smy_mat = np.dot(np.dot(v, w_diag), v.T)
+    sq_qr_smy_mat = np.real(sq_qr_smy_mat)
     g_stat = np.sum(np.dot(zx_mat, sq_qr_smy_mat)**2, axis=1)*inv_q_zx
 
     # approximate of chi2 distribution
@@ -50,3 +52,4 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
     g_pv_log10 = -np.log10(g_pv)
 
     return g_pv_log10, g_stat
+    # return g_stat

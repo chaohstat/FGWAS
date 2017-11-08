@@ -10,12 +10,13 @@ import sys
 import time
 from scipy.io import loadmat
 import numpy as np
-# from scipy.stats import f
+from scipy.stats import f
 # from multiprocessing import Pool
 from stat_read_x import read_x
 from stat_bw_rt import bw_rt
 from S1_MVCM import mvcm
-# from S2_GSIS import gsis
+import pylab
+from S2_GSIS import gsis
 # from S3_BSTP import wild_bstp
 # from S3_TEST import local_test
 
@@ -41,7 +42,7 @@ def run_script(input_dir, output_dir):
     mat = loadmat(img_file_name)
     img_data = mat['img_data']
     n, l, m = img_data.shape
-    img_data = np.log(img_data)
+    img_data = np.log10(img_data)
     print("The matrix dimension of image data is " + str(img_data.shape))
     print("+++++++Read the imaging coordinate data+++++++")
     coord_file_name = input_dir + "coord_data.txt"
@@ -102,14 +103,29 @@ def run_script(input_dir, output_dir):
     qr_smy_mat, esig_eta, smy_design, resy_design, efit_eta = mvcm(coord_data, y_design, h_opt, hat_mat)
     end_1 = time.time()
     print("Elapsed time in Step 1 is ", end_1 - start_1)
-    print(resy_design)
-    print(efit_eta)
+    # print(esig_eta)
+    # print(qr_smy_mat)
     for mii in range(m):
         res_mii = resy_design[:, :, mii]-efit_eta[:, :, mii]
-        print("The bound of the residual is [" + str(np.min(res_mii)) + ", " + str(np.max(res_mii)))
-        res_img = np.reshape(np.mean(res_mii, axis=0), (int(img_size[0]), int(img_size[1])))
-        res_img_file_name = output_dir + "residual_%d.txt" % mii
-        np.savetxt(res_img_file_name, res_img)
+        print("The bound of the residual is [" + str(np.min(res_mii)) + ", " + str(np.max(res_mii)) + "]")
+        # res_img = np.reshape(np.mean(res_mii, axis=0), (int(img_size[0]), int(img_size[1])))
+        # res_img_file_name = output_dir + "residual_%d.txt" % mii
+        # np.savetxt(res_img_file_name, res_img)
+
+    """+++++++++++++++++++++++++++++++++++"""
+    print(""" Step 2. Global sure independence screening (GSIS) """)
+    start_2 = time.time()
+    g_num = 1000  # number of top candidate snps
+    g_pv_log10 = gsis(snp, qr_smy_mat, hat_mat)[0]
+    g_pv_log10_file_name = output_dir + "g_pv_log10.txt"
+    np.savetxt(g_pv_log10_file_name, g_pv_log10)
+    snp_pv = 10 ** (-g_pv_log10)
+    top_snp_idx = np.argsort(-g_pv_log10)
+    top_snp = snp[:, top_snp_idx[0:g_num]]
+
+    end_2 = time.time()
+
+    print("Elapsed time in Step 2 is ", end_2 - start_2)
 
 
 if __name__ == '__main__':

@@ -36,9 +36,8 @@ def bw_rt(coord_mat, x_design, y_design):
     # calculate the median absolute deviation (mad) on both coordinate data and response data
 
     for mii in range(m):
-        res_y = np.dot(np.eye(n)-hat_mat, y_design[:, :, mii])
-        h_y = robust.mad(res_y, axis=1) / 0.6745    # type: np.ndarray
-        h_y_max = np.median(h_y)
+        h_y = robust.mad(y_design[:, :, mii], axis=1) / 0.6745    # type: np.ndarray
+        h_y_max = np.max(h_y)
         for dii in range(d):
             h_coord = robust.mad(coord_mat[:, dii]) / 0.6745
             h_rt[dii, mii] = 1.06*(1/n)**(1/(d+4))*np.sqrt(h_coord*h_y_max)
