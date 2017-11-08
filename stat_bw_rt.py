@@ -14,9 +14,9 @@ installed all the libraries above
 """
 
 
-def bw_opt(coord_mat, x_design, y_design):
+def bw_rt(coord_mat, x_design, y_design):
     """
-        optimal bandwidth selection in MVCM.
+        optimal bandwidth (Scott's Rule) selection in MVCM.
 
         Args:
             coord_mat (matrix): common coordinate matrix (l*d)
@@ -28,23 +28,21 @@ def bw_opt(coord_mat, x_design, y_design):
     n, p = x_design.shape
     l, d = coord_mat.shape
     m = y_design.shape[2]
-    h_coord = np.zeros((1, d))
-    h_y = np.zeros((1, m))
-    h_opt = np.zeros((d, m))
+    h_rt = np.zeros((d, m))
 
     # calculate the hat matrix
-    hat_mat = np.dot(np.dot(x_design, inv(np.dot(x_design.T, x_design)+np.eye(p)*0.0001)), x_design.T)
-    qhat_mat = np.eye(n)-hat_mat
+    hat_mat = np.dot(np.dot(x_design, inv(np.dot(x_design.T, x_design)+np.eye(p)*0.000001)), x_design.T)
 
     # calculate the median absolute deviation (mad) on both coordinate data and response data
-    for mii in range(m):
-        res_y = np.mean(np.dot(qhat_mat, y_design[:, :, mii]), axis=0)
-        h_y[0, mii] = robust.mad(res_y)/0.6745
-    for dii in range(d):
-        h_coord[0, dii] = robust.mad(coord_mat[:, dii])/0.6745
 
     for mii in range(m):
+        res_y = np.dot(np.eye(n)-hat_mat, y_design[:, :, mii])
+        h_y = robust.mad(res_y, axis=1) / 0.6745    # type: np.ndarray
+        h_y_max = np.median(h_y)
         for dii in range(d):
-            h_opt[dii, mii] = (1/n)**(1/(d+4))*np.sqrt(h_coord[0, dii]*h_y[0, mii])
+            h_coord = robust.mad(coord_mat[:, dii]) / 0.6745
+            h_rt[dii, mii] = 1.06*(1/n)**(1/(d+4))*np.sqrt(h_coord*h_y_max)
+            # h_rt[dii, mii] = 1.06*(1/n)**(1/(d+4))*np.sqrt(h_coord*h_y_max)
+            # the constant 1.06 is considered for Gaussian kernel
 
-    return h_opt, hat_mat
+    return h_rt, hat_mat

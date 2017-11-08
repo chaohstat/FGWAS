@@ -22,6 +22,9 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
             snp_mat (matrix): snp data (n*g)
             qr_smy_mat (matrix): common part in global test statistic (n*n)
             hat_mat (matrix): hat matrix (n*n)
+        Outputs:
+         g_pv_log10 (vector): -log10 p-values of across all SNPs
+         g_stat (vector): the global wald test statistics across all SNPs
     """
 
     # Set up
