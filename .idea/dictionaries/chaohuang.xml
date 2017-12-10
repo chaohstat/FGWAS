@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="chaohuang">
     <words>
+      <w>arange</w>
       <w>batchsize</w>
       <w>cifar</w>
       <w>cout</w>
@@ -10,11 +11,13 @@
       <w>isample</w>
       <w>itest</w>
       <w>itrain</w>
+      <w>loadtxt</w>
       <w>maxpooling</w>
       <w>nchannels</w>
       <w>nclass</w>
       <w>ntest</w>
       <w>ntrain</w>
+      <w>resampling</w>
       <w>savetxt</w>
       <w>sqrt</w>
     </words>

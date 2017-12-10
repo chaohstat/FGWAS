@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9664470-04fe-4a70-8939-7cf373341461" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/chaohuang.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/S0_bw_opt.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/S1_MVCM.py" afterPath="$PROJECT_DIR$/S1_MVCM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/S2_GSIS.py" afterPath="$PROJECT_DIR$/S2_GSIS.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_fgwas.sh" afterPath="$PROJECT_DIR$/run_fgwas.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stat_kernel.py" afterPath="$PROJECT_DIR$/stat_kernel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stat_read_x.py" afterPath="$PROJECT_DIR$/stat_read_x.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/chaohuang.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/chaohuang.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/S1_MVCM-1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/S1_MVCM.py" afterPath="$PROJECT_DIR$/S1_MVCM.py" />
+      <change beforePath="$PROJECT_DIR$/S2_GSIS-1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/S2_GSIS.py" afterPath="$PROJECT_DIR$/S2_GSIS.py" />
+      <change beforePath="$PROJECT_DIR$/S3_BSTP.py" afterPath="$PROJECT_DIR$/S3_BSTP.py" />
+      <change beforePath="$PROJECT_DIR$/run_fgwas.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/stat_bw.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/stat_bw_opt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/stat_bw_rt-1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/stat_bw_rt.py" afterPath="$PROJECT_DIR$/stat_bw_rt.py" />
+      <change beforePath="$PROJECT_DIR$/stat_label_region.py" afterPath="$PROJECT_DIR$/stat_label_region.py" />
+      <change beforePath="$PROJECT_DIR$/stat_read_x.py" afterPath="$PROJECT_DIR$/stat_read_x.py" />
+      <change beforePath="$PROJECT_DIR$/test-1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,25 +26,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="FGWAS" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/test.py">
+      <file leaf-file-name="run_script_1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/run_script_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1645">
-              <caret line="123" column="42" lean-forward="true" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
+            <state relative-caret-position="-1386">
+              <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding>
-                <element signature="e#200#210#0" expanded="true" />
+                <element signature="e#218#228#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FGWAS_run_script.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FGWAS_run_script.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="127" column="56" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="127" selection-end-column="56" />
+            <state relative-caret-position="1890">
+              <caret line="115" column="14" lean-forward="false" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -51,6 +61,15 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reshape</find>
+      <find>resha</find>
+      <find>TMPDIR</find>
+      <find>clean</find>
+      <find>std_sub</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,19 +86,30 @@
         <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_opt.py" />
         <option value="$PROJECT_DIR$/stat_bw.py" />
         <option value="$PROJECT_DIR$/stat_bw_opt.py" />
-        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_read_x.py" />
         <option value="$PROJECT_DIR$/stat_read_x.py" />
         <option value="$PROJECT_DIR$/S1_MVCM.py" />
-        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S1_MVCM.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/stat_bw_rt.py" />
-        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_rt.py" />
-        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S2_GSIS.py" />
         <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/test.py" />
+        <option value="$PROJECT_DIR$/test_2.py" />
+        <option value="$PROJECT_DIR$/S3_BSTP.py" />
+        <option value="$PROJECT_DIR$/run_script_2.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_read_x.py" />
+        <option value="$PROJECT_DIR$/run_script_1.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S2_GSIS.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_label_region.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S3_BSTP.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/run_script_2.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/run_script_1.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_rt.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S1_MVCM.py" />
+        <option value="$USER_HOME$/Desktop/FullRelease/updates_2017_bxz/HippoProcess_step1.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/7e1fde5d-875b-43b8-912b-bcd1e708e062/work/04333/chaoh/Hippo_proc/HippoProcess_step1.py" />
+        <option value="/private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/7e1fde5d-875b-43b8-912b-bcd1e708e062/work/04333/chaoh/Hippo_proc/Step-1-r/HippoProcess_step1.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="705" />
@@ -88,7 +118,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -101,11 +131,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/chaohuang/OneDrive/GitHub/FGWAS/test.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -145,27 +174,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="705" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="705" extended-state="1" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4262295" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4262295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4262295" sideWeight="0.49676898" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -173,113 +201,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/run_script_2.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/32fa8e17-a3a8-44b3-959a-0de9a60b0047/nas02/home/c/h/chaoh/FGWAS/S0_bw_opt.py" />
-    <entry file="file://$PROJECT_DIR$/stat_bw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_read_x.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MFSDA_Python/stat_lpks_wob.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MFSDA_Python/stat_lpks_wb1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="51" column="51" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FGWAS_run_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="142" column="30" lean-forward="true" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#200#210#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_kernel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_read_x.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/S1_MVCM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Documents/Deeplearning_rice/Hw2/trainCifarStarterCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_kernel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_read_x.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="42" lean-forward="true" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/S1_MVCM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_opt.py" />
     <entry file="file://$PROJECT_DIR$/../../Documents/Deeplearning_rice/Hw2/trainCifarStarterCode.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -296,13 +229,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py" />
     <entry file="file://$PROJECT_DIR$/S1_MVCM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -317,13 +244,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py" />
     <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/7e1fde5d-875b-43b8-912b-bcd1e708e062/work/04333/chaoh/FGWAS/test.py" />
     <entry file="file://$PROJECT_DIR$/../MFSDA_Python/stat_wald_ht.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -335,13 +256,6 @@
     <entry file="file://$PROJECT_DIR$/../../Code/IGWAS/FGWAS/test.py" />
     <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/5a9fc3a5-7c8c-4050-9ad8-38b61aa70c25/nas/longleaf/home/chaoh/FGWAS/stat_read_x.py" />
     <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/5a9fc3a5-7c8c-4050-9ad8-38b61aa70c25/nas/longleaf/home/chaoh/FGWAS/test.py" />
-    <entry file="file://$PROJECT_DIR$/S2_GSIS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MFSDA_Python/stat_sif.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
@@ -356,7 +270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_opt.py" />
     <entry file="file://$PROJECT_DIR$/../MFSDA_Python/stat_lpks_wb1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -372,13 +285,7 @@
       </provider>
     </entry>
     <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/32fa8e17-a3a8-44b3-959a-0de9a60b0047/nas02/home/c/h/chaoh/FGWAS/S0_bw_opt.py" />
-    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/stat_bw_opt.py" />
     <entry file="file://$PROJECT_DIR$/../../Documents/Deeplearning_rice/Hw2/trainCifarStarterCode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -400,7 +307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_read_x.py" />
     <entry file="file://$PROJECT_DIR$/../MFSDA_Python/MFSDA_run_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -408,72 +314,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stat_bw.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/test.py" />
+    <entry file="file://$PROJECT_DIR$/test_2.py" />
+    <entry file="file://$PROJECT_DIR$/test-1.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S3_TEST.py" />
+    <entry file="file://$PROJECT_DIR$/S3_BSTP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_script_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stat_read_x.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="91">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stat_bw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S1_MVCM.py" />
     <entry file="file://$PROJECT_DIR$/stat_bw_rt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_rt.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="111" column="46" lean-forward="true" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
-          <folding>
-            <element signature="e#200#210#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="86">
+          <caret line="36" column="54" lean-forward="true" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/S1_MVCM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S2_GSIS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
-          <folding>
-            <element signature="e#142#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1645">
-          <caret line="123" column="42" lean-forward="true" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
-          <folding>
-            <element signature="e#200#210#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1291">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FGWAS_run_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="127" column="56" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="127" selection-end-column="56" />
+        <state relative-caret-position="-25">
+          <caret line="140" column="52" lean-forward="true" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/S2_GSIS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_read_x.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_label_region.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S2_GSIS.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S3_BSTP.py" />
+    <entry file="file://$USER_HOME$/Downloads/FullRelease/Step-1/HippoProcess_step1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="93" column="24" lean-forward="false" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/run_script_2.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_opt.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/run_script_1.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/stat_bw_rt.py" />
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/6b6e21e2-7244-4f63-9d59-7e774676e151/nas/longleaf/home/chaoh/FGWAS/S1_MVCM.py" />
+    <entry file="file://$USER_HOME$/Desktop/FullRelease/updates_2017_bxz/HippoProcess_step1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="175" column="24" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="175" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="115" column="14" lean-forward="false" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/7e1fde5d-875b-43b8-912b-bcd1e708e062/work/04333/chaoh/Hippo_proc/HippoProcess_step1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="149" column="78" lean-forward="false" selection-start-line="149" selection-start-column="78" selection-end-line="149" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/yc/cm62zvc13qg92wl6qbxsz8br0000gn/T/7e1fde5d-875b-43b8-912b-bcd1e708e062/work/04333/chaoh/Hippo_proc/Step-1-r/HippoProcess_step1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-983">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_script_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1386">
+          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding>
+            <element signature="e#218#228#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

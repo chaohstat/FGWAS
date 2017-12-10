@@ -18,16 +18,19 @@ def bw_rt(coord_mat, x_design, y_design):
     """
         optimal bandwidth (Scott's Rule) selection in MVCM.
 
-        Args:
-            coord_mat (matrix): common coordinate matrix (l*d)
+        :param
+            coord_mat (matrix): common coordinate matrix (n_v*d)
             x_design (matrix): non-genetic design matrix (n*p)
-            y_design (matrix): imaging response data (response matrix, n*l*m)
+            y_design (matrix): imaging response data (response matrix, m*n*n_v)
+        :return
+            h_rt (matrix): optimal bandwidth matrix (n_v*d)
+            hat_mat (matrix): hat matrix (n*n)
     """
 
     # Set up
     n, p = x_design.shape
-    l, d = coord_mat.shape
-    m = y_design.shape[2]
+    n_v, d = coord_mat.shape
+    m = y_design.shape[0]
     h_rt = np.zeros((d, m))
 
     # calculate the hat matrix
@@ -36,12 +39,11 @@ def bw_rt(coord_mat, x_design, y_design):
     # calculate the median absolute deviation (mad) on both coordinate data and response data
 
     for mii in range(m):
-        h_y = robust.mad(y_design[:, :, mii], axis=1) / 0.6745    # type: np.ndarray
+        z = y_design[mii, :, :]
+        h_y = robust.mad(z, axis=1) / 0.6745    # type: np.ndarray
         h_y_max = np.max(h_y)
         for dii in range(d):
             h_coord = robust.mad(coord_mat[:, dii]) / 0.6745
             h_rt[dii, mii] = 1.06*(1/n)**(1/(d+4))*np.sqrt(h_coord*h_y_max)
-            # h_rt[dii, mii] = 1.06*(1/n)**(1/(d+4))*np.sqrt(h_coord*h_y_max)
-            # the constant 1.06 is considered for Gaussian kernel
 
     return h_rt, hat_mat

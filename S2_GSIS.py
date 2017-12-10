@@ -52,4 +52,3 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
     g_pv_log10 = -np.log10(g_pv)
 
     return g_pv_log10, g_stat
-    # return g_stat
