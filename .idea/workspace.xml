@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9664470-04fe-4a70-8939-7cf373341461" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/chaohuang.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/chaohuang.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/S1_MVCM-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/S1_MVCM.py" afterPath="$PROJECT_DIR$/S1_MVCM.py" />
-      <change beforePath="$PROJECT_DIR$/S2_GSIS-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/S2_GSIS.py" afterPath="$PROJECT_DIR$/S2_GSIS.py" />
-      <change beforePath="$PROJECT_DIR$/S3_BSTP.py" afterPath="$PROJECT_DIR$/S3_BSTP.py" />
-      <change beforePath="$PROJECT_DIR$/run_fgwas.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/stat_bw.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/stat_bw_opt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/stat_bw_rt-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/stat_bw_rt.py" afterPath="$PROJECT_DIR$/stat_bw_rt.py" />
-      <change beforePath="$PROJECT_DIR$/stat_label_region.py" afterPath="$PROJECT_DIR$/stat_label_region.py" />
-      <change beforePath="$PROJECT_DIR$/stat_read_x.py" afterPath="$PROJECT_DIR$/stat_read_x.py" />
-      <change beforePath="$PROJECT_DIR$/test-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-    </list>
+    <list default="true" id="c9664470-04fe-4a70-8939-7cf373341461" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +17,7 @@
       <file leaf-file-name="run_script_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_script_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1386">
+            <state relative-caret-position="-1446">
               <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding>
                 <element signature="e#218#228#0" expanded="true" />
@@ -109,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="705" />
@@ -174,7 +157,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="705" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="705" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -418,7 +401,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_script_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1386">
+        <state relative-caret-position="-1446">
           <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
           <folding>
             <element signature="e#218#228#0" expanded="true" />
