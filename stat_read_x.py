@@ -44,7 +44,7 @@ def read_x(coord_data, var_matrix, var_type):
 
     c_coord = np.mean(coord_data, axis=0)  # find the center of all coordinates
     coord_data = coord_data-c_coord
-    coord_norm = np.sqrt(np.sum(coord_data**2, axis=1))
+    coord_norm = np.sqrt(np.mean(coord_data**2, axis=0))
     coord_scale = np.max(coord_norm)
     n_coord_data = coord_data/coord_scale
 

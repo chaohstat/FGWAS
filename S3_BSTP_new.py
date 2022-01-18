@@ -73,15 +73,15 @@ def wild_bstp(snp_mat, proj_y_design, efit_eta, proj_mat, coord_mat, h_opt,
                 sm_weight = np.dot(np.dot(w, inv(np.dot(kx.T, t_mat[lii, :, :])+np.eye(d+1)*0.000001)), kx.T)
                 efit_eta_bstp[mii, :, lii] = np.squeeze(np.dot(proj_y_bstp[mii, :, :], sm_weight.T))
         
-        const = np.zeros((n, n, l))
+        const = np.zeros((n, n))
         for lii in range(l):
             if m==1:
                 esig_eta_bstp_lii_inv = n/np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T) # a number
-                const[:, :, lii] = esig_eta_bstp_lii_inv * np.dot(efit_eta_bstp[:, :, lii].T, efit_eta_bstp[:, :, lii]) # n x n
+                const = const + esig_eta_bstp_lii_inv * np.dot(efit_eta_bstp[:, :, lii].T, efit_eta_bstp[:, :, lii]) # n x n
             else:
                 esig_eta_bstp_lii_inv = n * inv(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)) # m x m
-                const[:, :, lii] = np.dot(np.dot(efit_eta_bstp[:, :, lii].T, esig_eta_bstp_lii_inv), efit_eta_bstp[:, :, lii]) # n x n
-        qr_smy_mat = np.mean(const, axis=2)
+                const = const + np.dot(np.dot(efit_eta_bstp[:, :, lii].T, esig_eta_bstp_lii_inv), efit_eta_bstp[:, :, lii]) # n x n
+        qr_smy_mat = const / l
         
         ################### test statistic & p-value ###################
         wg_pv_log10, g_stat = gsis(snp_mat, qr_smy_mat, proj_mat)
@@ -92,14 +92,25 @@ def wild_bstp(snp_mat, proj_y_design, efit_eta, proj_mat, coord_mat, h_opt,
         zx_mat = np.dot(proj_mat, top_snp_mat).T
         inv_q_zx = np.sum(zx_mat * zx_mat, axis=1) ** (-1)
         
-        const_all = np.zeros((n, n*l))
+        const = np.zeros((n, n))
         for lii in range(l):
-            const_all[:, (lii*n):((lii+1)*n)] = const[:, :, lii]
-        
+            if m==1:
+                esig_eta_bstp_lii_inv = n/np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T) # a number
+                const = esig_eta_bstp_lii_inv * np.dot(efit_eta_bstp[:, :, lii].T, efit_eta_bstp[:, :, lii]) # n x n
+            else:
+                esig_eta_bstp_lii_inv = n * inv(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)) # m x m
+                const = np.dot(np.dot(efit_eta_bstp[:, :, lii].T, esig_eta_bstp_lii_inv), efit_eta_bstp[:, :, lii])
+
         for gii in range(g_num):
-            temp_1 = np.dot(np.atleast_2d(zx_mat[gii, :]), const_all)
-            temp = temp_1.reshape(l, n)
-            l_stat_top[gii, :] = np.squeeze(np.dot(temp, np.atleast_2d(zx_mat[gii, :]).T))*inv_q_zx[gii]
+            for lii in range(l):
+                if m == 1:
+                    esig_eta_bstp_lii_inv = n / np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)  # a number
+                    const = esig_eta_bstp_lii_inv * np.dot(efit_eta_bstp[:, :, lii].T, efit_eta_bstp[:, :, lii]) # n x n
+                else:
+                    esig_eta_bstp_lii_inv = n * inv(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T))  # m x m
+                    const = np.dot(np.dot(efit_eta_bstp[:, :, lii].T, esig_eta_bstp_lii_inv), efit_eta_bstp[:, :, lii])
+                temp = np.dot(np.atleast_2d(zx_mat[gii, :]), const)
+                l_stat_top[gii, lii] = np.squeeze(np.dot(temp, np.atleast_2d(zx_mat[gii, :]).T))*inv_q_zx[gii]
         
         max_lstat_bstp[bii, 0] = np.max(l_stat_top)
         

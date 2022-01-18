@@ -1,9 +1,3 @@
-This FGWAS package is developed by Chao Huang and Hongtu Zhu from the [BIG-S2 lab](http://odin.mdacc.tmc.edu/bigs2/).
-
-FGWAS (Functional Genome Wide Association analysiS) is a Python coding based package for imaging genetic analysis.
-Functional phenotypes (e.g., subcortical surface representation), which commonly arise in imaging genetic studies, have been used to detect putative genes for complexly inherited neuropsychiatric and neurodegenerative disorders. However, existing statistical methods largely ignore the functional features (e.g., functional smoothness and correlation). The aim of this toolbox is to develop a functional genome-wide association analysis framework to efficiently carry out whole-genome analyses of functional phenotypes. FGWAS consists of three components: a multivariate varying coefficient model, a global sure independence screening procedure, and a test procedure. Compared with the standard multivariate regression model, the multivariate varying coefficient model explicitly models the functional features of functional phenotypes through the integration of smooth coefficient functions and functional principal component analysis. Statistically, compared with existing methods for genomewide association studies (GWAS), FGWAS can substantially boost the detection power for discovering important genetic variants influencing brain structure and function. Simulation studies show that FGWAS outperforms existing GWAS methods for searching sparse signals in an extremely large search space, while controlling for the family-wise error rate.
-# Command Script
-
 A.Pipeline: run the following scripts in order in python3:
 0.preparation
   0.1 modify PATH in the following 3 scripts into your path containing all python scripts contained in this package
@@ -14,10 +8,10 @@ A.Pipeline: run the following scripts in order in python3:
   - GSIS_all.txt
     [each SNP per row for all SNPs, with columns: 1.SNP chromosome, 2.SNP position (bp), 3.global test statistic, and 4.p-value]
   - GSIS_top.txt
-    [each SNP per row for top SNPs (sorted from most significant to less significant),
+    [each SNP per row for top SNPs (sorted from most significant to less significant), 
     with columns: 1. SNP name, 2.SNP chromosome, 3.SNP position (bp), 4.-log10(global p-value)]
 2_bstp.py [Bootstrap: can submit multiple jobs, each running this script for b bootstrap samples]
-  output:
+  output: 
     max_lstat_bstp_i [bootstrap local test statistics]
     max_gstat_bstp_i [bootstrap global test statistics]
     max_area_bstp_i  [bootstrap cluster-size statistics]
@@ -37,9 +31,9 @@ A.Pipeline: run the following scripts in order in python3:
 
 B.Directory structure under PATH:
 - data [input data; all w.o. row names nor column names]
-  1.img_data_left.mat, img_data_right.mat
+  1.img_data_left.mat, img_data_right.mat 
     [m x n x l matrix of image response; m: # responses, n: # sumjects, l: # voxels]
-  2.coord_data_left.txt, coord_data_right.txt
+  2.coord_data_left.txt, coord_data_right.txt 
     [l x d matrix of image coordinates; d: dimension of image (e.g. 2 for 2D image, 3 for 3D image)]
   3.design_data.txt
     [n x p matrix of design matrix (w.o. 1st column of 1's; the 1st column of 1's will be added in code)]
@@ -62,3 +56,5 @@ B.Directory structure under PATH:
     - work [optional directory to hold your job-running log files]
   - right [similar to 'left']
     ...
+
+

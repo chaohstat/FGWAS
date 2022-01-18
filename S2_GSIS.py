@@ -2,7 +2,7 @@
 Global sure independence screening (GSIS) procedure in FGWAS.
 
 Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2017-09-18
+Last update: 2022-01-08
 """
 
 import numpy as np
@@ -14,14 +14,14 @@ installed all the libraries above
 """
 
 
-def gsis(snp_mat, qr_smy_mat, hat_mat):
+def gsis(snp_mat, qr_smy_mat, proj_mat):
     """
         Global sure independence screening (GSIS) procedure.
 
         :param
             snp_mat (matrix): snp data (n*g)
             qr_smy_mat (matrix): common part in global test statistic (n*n)
-            hat_mat (matrix): hat matrix (n*n)
+            proj_mat (matrix): projection matrix (n*n)
         :return
          g_pv_log10 (vector): -log10 p-values of across all SNPs
          g_stat (vector): the global wald test statistics across all SNPs
@@ -31,8 +31,13 @@ def gsis(snp_mat, qr_smy_mat, hat_mat):
     n, g = snp_mat.shape
 
     # calculate the hat matrix
-    zx_mat = np.dot(np.eye(n)-hat_mat, snp_mat).T
-    inv_q_zx = np.sum(zx_mat*zx_mat, axis=1)**(-1)
+    zx_mat = np.dot(proj_mat, snp_mat).T
+    # inv_q_zx = np.sum(zx_mat*zx_mat, axis=1)**(-1)
+    q_zx = np.sum(zx_mat*zx_mat, axis=1)
+    if np.min(q_zx) == 0:
+        q_zx = q_zx + 0.000001
+    inv_q_zx = q_zx**(-1)
+
     w, v = eig(qr_smy_mat)
     w = np.real(w)
     w[w < 0] = 0
