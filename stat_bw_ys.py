@@ -1,12 +1,3 @@
-"""
-optimal bandwidth selection in multivariate varying coefficient model (MVCM):
-h_opt = median of distances between adjacent points for each dimension
-
-Author: Yue Shan (yueashan@gmail.com)
-Last update: 2017-09-18
-Created: 2021-04-04
-"""
-
 import numpy as np
 
 

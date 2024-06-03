@@ -1,19 +1,9 @@
-"""
-Significant locus-voxel and locus-subregion testing procedure in FGWAS.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2021-06-19
-"""
-
 import numpy as np
 from numpy.linalg import inv
 from numpy.linalg import eig
 from stat_label_region import label_region
-from scipy.stats import chi2, f
+from scipy.stats import chi2
 
-"""
-installed all the libraries above
-"""
 
 
 def local_test(top_snp_mat, esig_eta, efit_eta, proj_mat, img_size, img_idx, c_alpha, max_stat_bstp, max_area_bstp):
@@ -38,7 +28,6 @@ def local_test(top_snp_mat, esig_eta, efit_eta, proj_mat, img_size, img_idx, c_a
     m, n, l = efit_eta.shape
     l_stat = np.zeros((g_num, l))
     cluster_pv = np.zeros(g_num)
-    p = 1
 
     zx_mat = np.dot(proj_mat, top_snp_mat).T
     inv_q_zx = np.sum(zx_mat * zx_mat, axis=1) ** (-1)
@@ -53,9 +42,6 @@ def local_test(top_snp_mat, esig_eta, efit_eta, proj_mat, img_size, img_idx, c_a
         sq_qr_smy_mat = np.dot(np.dot(v, w_diag), v.T)
         l_stat[:, lii] = np.sum(np.dot(zx_mat, sq_qr_smy_mat) ** 2, axis=1) * inv_q_zx
     
-    l_pv_raw = 1 - f.cdf(l_stat, dfn=1, dfd=n-p)
-    l_pv_raw_log10 = -np.log10(l_pv_raw)
-    
     # approximate of chi2 distribution
     k1 = np.mean(max_stat_bstp)
     k2 = np.var(max_stat_bstp)
@@ -64,9 +50,10 @@ def local_test(top_snp_mat, esig_eta, efit_eta, proj_mat, img_size, img_idx, c_a
     b = k1 - 2 * k2 ** 2 / k3
     d = 8 * k2 ** 3 / k3 ** 2
     l_pv_adj = 1 - chi2.cdf((l_stat - b) / a, d)
-    
-    for gii in range(g_num):
-        max_area = label_region(img_size, img_idx, l_pv_raw_log10[gii, :], c_alpha)
-        cluster_pv[gii] = np.sum(max_area_bstp >= max_area)/len(max_area_bstp)
+    l_pv_adj_log10 = -np.log10(l_pv_adj)
 
-    return l_pv_raw, l_pv_adj, l_stat, cluster_pv
+    for gii in range(g_num):
+        max_area = label_region(img_size, img_idx, l_pv_adj_log10[gii, :], c_alpha)
+        cluster_pv[gii] = len(np.where(max_area_bstp >= max_area))/len(max_area_bstp)
+
+    return l_pv_adj, l_stat, cluster_pv

@@ -9,10 +9,11 @@ from stat_bw_ys import bw_ys
 from S1_MVCM import mvcm
 from S2_GSIS import gsis
 
-LorR = sys.argv[1]
-input_dir  = 'data/'
-output_dir = 'res/' + LorR + 'res/'
-interm_dir = 'res/' + LorR + 'vars/'
+LorR = 'right' # 'left' or 'right'
+
+input_dir  = 'PATH/data/'
+output_dir = 'res/' + LorR + '/'
+interm_dir = 'vars/' + LorR + '/'
 
 
 y_design = loadmat(input_dir + "img_data_"+LorR+".mat")['img_data'] # m*n*n_v or n*n_v
@@ -40,7 +41,7 @@ proj_y_design = 0*y_design
 for mii in range(m):
       proj_y_design[mii, :, :] = np.dot(proj_mat, np.squeeze(y_design[mii, :, :]))
 
-h_opt = bw_ys(coord_data)
+h_opt = bw_ys(coord_data) # 8.55681693e-05, 8.55681693e-05, 6.84545354e-05
 qr_smy_mat, efit_eta, esig_eta = mvcm(coord_data, proj_y_design, h_opt)
 end_1 = time.time()
 print("Elapsed time in Step 1 is ", end_1 - start_1) # 7.6 minutes

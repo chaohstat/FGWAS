@@ -1,6 +1,6 @@
 A.Pipeline: run the following scripts in order in python3:
 0.preparation
-  0.1 modify PATH in the following 3 scripts into your path containing all python scripts contained in this package
+  0.1 modify PATH in the following 3 scripts to your path that contains all python scripts in this package
   0.2 create the file directory structure (as in section B)
   0.3 prepare input data (as under section B:data)
 1_gsis.py [GSIS]
@@ -22,8 +22,8 @@ A.Pipeline: run the following scripts in order in python3:
 3_test.py [Local Test & Cluster-Size Analysis]
   output:
     local_pv_raw.txt [raw p-values at each voxel as local tests]
-    local_pv_adj.txt [p-values at each voxel adjusted for # SNPs and # voxels]
     local_stat.txt   [local statistics at each voxel]
+    local_pv_adj.txt [p-values at each voxel adjusted for # SNPs and # voxels]
     cluster_pv.txt   [p-values for cluster-size analysis for each SNP]
 4.[optional] global test: calculate p-values adjusted for the number of SNPs (Ng)
   based on column 3 of GSIS_all.txt and its distribution max_gstat_bstp.txt
@@ -48,13 +48,14 @@ B.Directory structure under PATH:
     [length-d vector, indicating the size of the image (e.g. '40 50 30' for a 40x50x30 3D image)]
   8.img_idx.txt
     [length-l vector, containing the order of the voxels (e.g. 1:l)]
-- res
+- res [contains final results from 1_gsis.py and 3_test.py]
   - left [assume there are left side and right side such as for hippocampus. Otherwise, modify the file structure accordingly.]
-    - vars [contains intermediate outputs]
-    - bstp [contains boostrap statistics (output from 2_bstp.py)]
-    - res  [contains result from 1_gsis.py and 3_test.py]
-    - work [optional directory to hold your job-running log files]
   - right [similar to 'left']
     ...
-
-
+- vars/ [contains intermediate outputs]
+  - left/
+  - right/
+- bstp [contains boostrap statistics (output from 2_bstp.py)]
+  - left/
+  - right/
+- work [optional directory to hold your job-running log files]

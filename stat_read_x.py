@@ -1,15 +1,4 @@
-"""
-Read and construct design matrix.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2017-08-14
-"""
-
 import numpy as np
-
-"""
-installed all the libraries above
-"""
 
 
 def read_x(coord_data, var_matrix, var_type):

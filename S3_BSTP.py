@@ -76,10 +76,10 @@ def wild_bstp(snp_mat, proj_y_design, efit_eta, proj_mat, coord_mat, h_opt,
         const = np.zeros((n, n, l))
         for lii in range(l):
             if m==1:
-                esig_eta_bstp_lii_inv = n/np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T) # a number
+                esig_eta_bstp_lii_inv = n/(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)+0.000001) # a number
                 const[:, :, lii] = esig_eta_bstp_lii_inv * np.dot(efit_eta_bstp[:, :, lii].T, efit_eta_bstp[:, :, lii]) # n x n
             else:
-                esig_eta_bstp_lii_inv = n * inv(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)) # m x m
+                esig_eta_bstp_lii_inv = n * inv(np.dot(efit_eta_bstp[:, :, lii], efit_eta_bstp[:, :, lii].T)+np.eye(m)*0.000001) # m x m
                 const[:, :, lii] = np.dot(np.dot(efit_eta_bstp[:, :, lii].T, esig_eta_bstp_lii_inv), efit_eta_bstp[:, :, lii]) # n x n
         qr_smy_mat = np.mean(const, axis=2)
         

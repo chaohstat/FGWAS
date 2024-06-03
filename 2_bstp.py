@@ -2,17 +2,19 @@ import sys
 import pickle
 import time
 import numpy as np
-from S3_BSTP import wild_bstp
 from scipy.io import loadmat
+from S3_BSTP import wild_bstp
 
 LorR = sys.argv[1]
 i = sys.argv[2]
-input_dir  = 'data/'
-interm_dir = 'res/' + LorR + 'vars/'
-bstp_dir   = 'res/' + LorR + 'bstp/'
 
 
-y_design = loadmat(input_dir + "img_data_"+LorR+".mat")['img_data'] # m*n*n_v
+input_dir  = 'PATH/data/'
+interm_dir = 'vars/' + LorR + '/'
+bstp_dir   = 'bstp/' + LorR + '/'
+
+
+y_design = loadmat(input_dir + 'img_data_left.mat') # m*n*n_v
 if y_design.ndim==2:
   y_design = y_design[np.newaxis,:, :]
 

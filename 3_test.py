@@ -2,13 +2,14 @@ import sys
 import pickle
 import time
 import numpy as np
+from scipy.stats import f
 from S3_TEST import local_test
 
-LorR = sys.argv[1]
-input_dir  = 'data/'
-interm_dir = 'res/' + LorR + 'vars/'
-bstp_dir   = 'res/' + LorR + 'bstp/'
-output_dir = 'res/' + LorR + 'res/'
+LorR = 'left'
+input_dir  = 'PATH/data/'
+interm_dir = 'vars/' + LorR + '/'
+bstp_dir   = 'bstp/' + LorR + '/'
+output_dir = 'res/' + LorR + '/'
 
 max_lstat_bstp = np.loadtxt(bstp_dir + "max_lstat_bstp.txt")
 max_area_bstp = np.loadtxt(bstp_dir + "max_area_bstp.txt")
@@ -23,10 +24,12 @@ proj_mat = pickle.load(open(interm_dir+'proj_mat.dat','rb'))
 
 
 start_3 = time.time()
+p = 1
 n = efit_eta.shape[1]
 alpha = 0.005
 alpha_log10 = -np.log10(alpha)
-l_pv_raw, l_pv_adj, l_stat, cluster_pv = local_test(top_snp, esig_eta, efit_eta, proj_mat, img_size, img_idx, alpha_log10, max_lstat_bstp, max_area_bstp)
+l_pv_adj, l_stat, cluster_pv = local_test(top_snp, esig_eta, efit_eta, proj_mat, img_size, img_idx, alpha_log10, max_lstat_bstp, max_area_bstp)
+l_pv_raw = f.cdf(l_stat, dfn=1, dfd=n-p)
 end_3 = time.time()
 print("Elapsed time in Step 3 is ", end_3 - start_3)
 

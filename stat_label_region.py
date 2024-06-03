@@ -1,16 +1,6 @@
-"""
-Label connected regions and return the corresponding areas.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2017-10-14
-"""
-
 import numpy as np
 from scipy.ndimage import label
 
-"""
-installed all the libraries above
-"""
 
 
 def label_region(img_size, img_idx, pv_log10, alpha_log10):

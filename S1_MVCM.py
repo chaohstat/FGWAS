@@ -1,17 +1,6 @@
-"""
-Local linear kernel smoothing on MVCM in FGWAS.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2022-01-08
-"""
-
 import numpy as np
 from numpy.linalg import inv
 from stat_kernel import gau_kernel
-
-"""
-installed all the libraries above
-"""
 
 
 def mvcm(coord_mat, proj_y_design, h_opt):
@@ -36,7 +25,7 @@ def mvcm(coord_mat, proj_y_design, h_opt):
     efit_eta = proj_y_design * 0
     
     w = np.zeros((1, d + 1))
-    w[0,0] = 1
+    w[0] = 1
     t_mat0 = np.zeros((d + 1, n_v, n_v))  # L x L x d + 1 matrix
     t_mat0[0, :, :] = np.ones((n_v, n_v))
     
@@ -46,17 +35,15 @@ def mvcm(coord_mat, proj_y_design, h_opt):
     
     for mii in range(m):
         k_mat = np.ones((n_v, n_v))
-        # t_mat = np.zeros((n_v, d+1, n_v))
+        t_mat = np.zeros((n_v, d+1, n_v))
         for dii in range(d):
             h = h_opt[dii]
-            # t_mat[:,dii+1,:] = t_mat0[dii + 1, :, :] / h
-            k_mat = k_mat * gau_kernel(t_mat0[dii+1,:,:]/h, h)  # Gaussian kernel smoothing function
-
-        t_mat = np.transpose(t_mat0, [2,1,0])   
+            t_mat[:,dii+1,:] = t_mat0[dii + 1, :, :] / h
+            k_mat = k_mat * gau_kernel(t_mat[:,dii+1,:], h)  # Gaussian kernel smoothing function
         
         for lii in range(n_v):
-            kx = np.dot(np.atleast_2d(k_mat[:, lii]).T, np.ones((1, d + 1)))*t_mat[lii, :, :]  # n_v x d+1 matrix
-            sm_weight = np.dot(np.dot(w, inv(np.dot(kx.T, t_mat[lii, :, :])+np.eye(d+1)*0.000001)), kx.T)
+            kx = np.dot(np.atleast_2d(k_mat[:, lii]).T, np.ones((1, d + 1)))*t_mat[lii, :, :].T  # n_v x d+1 matrix
+            sm_weight = np.dot(np.dot(w, inv(np.dot(kx.T, t_mat[lii, :, :].T)+np.eye(d+1)*0.000001)), kx.T)
             efit_eta[mii, :, lii] = np.squeeze(np.dot(proj_y_design[mii, :, :], sm_weight.T))
     
     esig_eta = np.zeros((n_v, m, m))

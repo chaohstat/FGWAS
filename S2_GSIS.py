@@ -1,17 +1,6 @@
-"""
-Global sure independence screening (GSIS) procedure in FGWAS.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2022-01-08
-"""
-
 import numpy as np
 from numpy.linalg import eig
 from scipy.stats import chi2
-
-"""
-installed all the libraries above
-"""
 
 
 def gsis(snp_mat, qr_smy_mat, proj_mat):
@@ -32,12 +21,7 @@ def gsis(snp_mat, qr_smy_mat, proj_mat):
 
     # calculate the hat matrix
     zx_mat = np.dot(proj_mat, snp_mat).T
-    # inv_q_zx = np.sum(zx_mat*zx_mat, axis=1)**(-1)
-    q_zx = np.sum(zx_mat*zx_mat, axis=1)
-    if np.min(q_zx) == 0:
-        q_zx = q_zx + 0.000001
-    inv_q_zx = q_zx**(-1)
-
+    inv_q_zx = np.sum(zx_mat*zx_mat, axis=1)**(-1)
     w, v = eig(qr_smy_mat)
     w = np.real(w)
     w[w < 0] = 0

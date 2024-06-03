@@ -1,15 +1,4 @@
-"""
-Construct kernel functions in MVCM.
-
-Author: Chao Huang (chaohuang.stat@gmail.com)
-Last update: 2017-08-14
-"""
-
 import numpy as np
-
-"""
-installed all the libraries above
-"""
 
 
 def ep_kernel(x, h):
